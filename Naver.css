@@ -7,9 +7,28 @@
     height: 160px;
 }
 .service_area{
-    height: 100%;
+    height: 23px;
     text-align: right;
 }
 .service_area .link_set{
-    
+    font-size: 11px;
+    color: #404040;
+}
+.service_area .link_set:after{
+    display: inline-block;
+    background-image: url(./naverlogo.png);
+    width: 26px;
+    height: 26px;
+    background-size: 440px 410px;
+    background-position: -380px -209px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    content:'';
+    margin: -3px 0 0 3px;
+}
+.blind{
+    display: none;
+}
+.logo {
+    height: 100%;
 }
