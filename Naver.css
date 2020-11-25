@@ -7,6 +7,14 @@ body{
     line-height: 16px;
     font-size: 12px;
 }
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 .special_bar{
     height: 160px;
 
@@ -94,14 +102,26 @@ header .group_flex{
     background-position: -380px -199px;
     background-repeat: no-repeat;
 }
-.blind{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-.logo {
+header .logo_area{
+    position: relative;
     height: 100%;
+}
+header .logo_default{
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    margin-top: -32px;
+}
+
+header .logo_area .logo_ico{
+    display: inline-block;
+    width: 222px;
+    height: 52px;
+    background-position: 0 -158px;
+    background-repeat: no-repeat;
+    background-image: url(./naverlogo.png);
+    background-size: 440px 410px;
+    vertical-align: top;
+
+
 }
