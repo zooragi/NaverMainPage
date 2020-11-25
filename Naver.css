@@ -3,16 +3,35 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    line-height: 16px;
+    font-size: 12px;
+}
 .special_bar{
     height: 160px;
+
+}
+header .group_flex{
+    width: 1130px;
+    height:100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
 }
 .service_area{
-    height: 23px;
-    text-align: right;
+    clear: both;
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 27px;
 }
 .service_area .link_set{
+    float: left;
     font-size: 11px;
     color: #404040;
+}
+.service_area .link_set:hover{
+    text-decoration:underline;
 }
 .service_area .link_set:after{
     display: inline-block;
@@ -20,14 +39,68 @@
     width: 26px;
     height: 26px;
     background-size: 440px 410px;
-    background-position: -380px -209px;
+    background-position: -382px -213px;
     background-repeat: no-repeat;
     vertical-align: top;
     content:'';
     margin: -3px 0 0 3px;
 }
+.service_area .sa_bar{
+    float:left;
+    width: 1px;
+    height: 10px;
+    margin: 3px 7px;
+    background-color: #e4e8eb;
+}
+.service_area .link_jrnaver{
+    float: left;
+    position: relative;
+}
+.service_area .link_jrnaver .jrnaver_ico{
+    background-image: url(./naverlogo.png);
+    background-size: 440px 410px;
+    background-position: -333px -267px;
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    margin: 3px;
+}
+.service_area .link_jrnaver .jrnaver_ico:hover{
+    background-image: url(./naverlogo.png);
+    background-size: 440px 410px;
+    background-position: -257px -296px;
+    background-repeat: no-repeat;
+
+}
+.service_area .link_happybean{
+    float: left;
+}
+.service_area .happybean_ico{
+    background-image: url(./naverlogo.png);
+    background-size: 440px 410px;
+    display: inline-block;
+    width: 34px;
+    height: 11px;
+    background-position: -257px -308px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    margin: 3px 3px 2px;
+}
+.service_area .happybean_ico:hover{
+    background-image: url(./naverlogo.png);
+    background-size: 440px 410px;
+    background-position: -380px -199px;
+    background-repeat: no-repeat;
+}
 .blind{
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 .logo {
     height: 100%;
