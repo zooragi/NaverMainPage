@@ -27,10 +27,10 @@ fieldset{
 }
 .naverlogo{
     background-image: url(./naverlogo.png);
-    background-size: 440px 410px;
     display: inline-block;
     background-repeat: no-repeat;
     vertical-align: top;
+    background-size: 440px 410px;
 }
 header .group_flex{
     width: 1130px;
@@ -155,4 +155,50 @@ header .search_bar .search_btn .search_btn_ico{
     width: 22px;
     height: 22px;
     background-position: -180px -386px;
+}
+header .search_bar .keyboard_btn{
+    position: absolute;
+    top: 0;
+    right: 84px;
+    bottom: 0;
+    width: 36px;
+}
+header .search_bar .keyboard_ico{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 12px;
+    background-position: -420px -248px;
+    margin: -6px 0 0 -10px;
+    cursor: pointer;
+}
+
+header .search_bar .keyboard_ico:hover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 12px;
+    background-position: -420px -262px;
+    margin: -6px 0 0 -10px;
+
+}
+header .search_bar .autocomplete{
+    position: absolute;
+    top: 0;
+    right: 64px;
+    bottom: 0;
+    width: 22px;
+}
+header .search_bar .autocomplete_ico{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 5px;
+    background-position: -404px -258px;
+    background-repeat: no-repeat;
+    margin: -2px 0 0 -5px;
+    cursor: pointer;
 }
