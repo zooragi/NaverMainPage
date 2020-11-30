@@ -1,4 +1,4 @@
-(function(){
+export let searchBar = (function(){
     "use strict"
     
 })();
