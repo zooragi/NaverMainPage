@@ -1,9 +1,10 @@
 <html>
     <head>
-        <!-- git test -->
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="/src/Naver.css?ver=1">
-        <script type="text/javascript" src="/src/Naver.js"></script>
+        <link rel="stylesheet" type="text/css" href="/src/naver.css">
+        <script type="module" src="/src/index.js"></script>
+        <!-- <script type="module" src="/src/searchButtonClick.js"></script> -->
+
     </head>
     <body>
         <div id="wrap">
@@ -29,20 +30,21 @@
                             </a>
                         </div>
                         <div class="search_bar">
-                            <form>
-                                <fieldset>
-                                    <legend class="blind">검색</legend>
-                                    <div class="green_box">
-                                        <input type="text" title="검색어 입력" maxlength="255" class="input_text">
-                                    </div>
-                                </fieldset>
-                                <button class="search_btn">
-                                    <span class="blind">검색버튼</span>
-                                    <span class="search_btn_ico naverlogo"></span>
-                                </button>
-                                
+                        <!-- <form> -->
+                            <fieldset>
+                                <legend class="blind">검색</legend>
+                                <div class="green_box">
+                                    <input type="text" title="검색어 입력" maxlength="255" class="input_text">
+                                </div>
+                            </fieldset>
+                            
+                            <button class="search_btn" >
+                                <span class="blind">검색버튼</span>
+                                <span class="search_btn_ico naverlogo"></span>
+                            </button>
+                        <!-- </form> -->
 
-                            </form>
+                        
                             <div class="keyboard_btn">
                                 <span class="blind">한글 입력기</span>
                                 <span class="keyboard_ico naverlogo"></span>

@@ -1,8 +1,8 @@
-import searchBar from "./searchBar.js"
-/*git test*/
+import * as searchwindow from "./seachwindowfunction/index.js"
+
 (function(){
     function init(){
-        searchBar();
+        searchwindow.searchFunction();
     }
     init();
 })();
