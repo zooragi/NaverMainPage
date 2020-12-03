@@ -3,7 +3,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="/src/naver.css">
         <script type="module" src="/src/index.js"></script>
-        <!-- <script type="module" src="/src/searchButtonClick.js"></script> -->
+        <link rel="icon" href="favicon.png">
 
     </head>
     <body>
@@ -37,14 +37,11 @@
                                     <input type="text" title="검색어 입력" maxlength="255" class="input_text">
                                 </div>
                             </fieldset>
-                            
                             <button class="search_btn" >
                                 <span class="blind">검색버튼</span>
                                 <span class="search_btn_ico naverlogo"></span>
                             </button>
                         <!-- </form> -->
-
-                        
                             <div class="keyboard_btn">
                                 <span class="blind">한글 입력기</span>
                                 <span class="keyboard_ico naverlogo"></span>
@@ -53,6 +50,34 @@
                                 <span class="blind">자동완성 레이어</span>
                                 <span class="autocomplete_ico naverlogo"></span>
                             </div>
+                            <!-- autocomplete -->
+                            <div class="autoframe">
+                                <div class="autocmp_wrap">
+                                    <div class="autocmp_recent_layout">
+                                        <div class="autocmp_recent_header">
+                                            <strong class="tit">최근검색어</strong>
+                                            <div class="delAll_item">전체삭제</div>
+                                        </div>
+                                        <div class="autocmp_recent_container">
+                                            <ul class="kwd_list">
+                                                <li class="kwd_item">
+                                                    <div class="kwd">
+                                                        <span class="fix">                                                        
+                                                            <span class="kwd_ico">
+                                                                <i class="search_ico"></i>
+                                                            </span>
+                                                            <span>라면 맛나게 먹는법</span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="autocmp_recent_footer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- autocomplete -->
+
                         </div>
                         
                     </div>
