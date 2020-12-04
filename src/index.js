@@ -1,8 +1,8 @@
-import * as searchwindow from "./seachwindowfunction/index.js"
+import * as search from "./search/index.js"
 
 (function(){
     function init(){
-        searchwindow.searchFunction();
+        search.searchWindow();
     }
     init();
 })();
