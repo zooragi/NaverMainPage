@@ -1,6 +1,4 @@
 import { searchListHtml } from './searchlisthtml.js'
-import { month, day } from './date.js'
-
 let searchValue = [];
 let searchWindow = function(){
     "use strict";
@@ -8,37 +6,45 @@ let searchWindow = function(){
     const qs = (x) => document.querySelector(x);
     const $searchBtn = qs(".search_btn");
     const $searchTerm = qs(".input_text");
-    const $kwd_list =qs(".kwd_list");
+    const $kwd_list = qs(".kwd_list");
+    let blankDicision = (term) => term.replace(/ /g,"");
 
-    $searchTerm.addEventListener("keydown", (e) => {
+    function init(){
+        eventListener($searchTerm,"keydown",searchWindowKeyEvent);
+        eventListener($searchBtn,"click",searchWindowClickEvent);
+    }
+
+    function eventListener(eventTarget,type,eventHandler){
+        eventTarget.addEventListener(type, (e) => eventHandler(e));
+    }
+    function searchWindowKeyEvent(e){
         if(e.keyCode === 13){
-            searchValueCountLimit($searchTerm.value);
+            searchValueSave($searchTerm.value);
+            render();
         }
-    });
-    $searchBtn.addEventListener("click",(e)=> {
-        searchValueCountLimit($searchTerm.value);
-    });
+    }
+    function searchWindowClickEvent(){
+        searchValueSave($searchTerm.value);
+        render();
+        $searchTerm.focus();
+    }
 
-    function searchValueCountLimit(value){
-        if(blankDicision(value)) return;
-        if(searchValue.length > 9){
-            searchValue.push(value);
-            searchValue.shift();
-            $kwd_list.lastChild.remove();
-        } else {
-            searchValue.push($searchTerm.value);  
+    function searchValueSave(value){
+        if(blankDicision(value) === "") alert("''에 대한 검색결과가 없습니다.");
+        else{
+            searchValue.push(blankDicision($searchTerm.value));  
+            if(searchValue.length > 9) $kwd_list.lastChild.remove();
+            $searchTerm.value="";
         }
+        
+    }
+    function render(){
         $kwd_list.insertAdjacentHTML("afterbegin",searchListHtml(searchValue.slice(-1)[0]));
-        $searchTerm.value="";
     }
 
-    function blankDicision(term){
-        if( term.replace(/ /g,"") === "" ) {
-            alert("''에 대한 검색결과가 없습니다.")
-            return 1;
-        }
-    }
-    
+
+    init();
+
  
 
 };
