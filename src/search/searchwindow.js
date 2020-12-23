@@ -1,4 +1,5 @@
 import { searchListHtml } from './searchlisthtml.js'
+import { searchValueDelete } from './searchvaluedelete.js'
 
 let searchValue = [];
 let searchWindow = function(){
@@ -7,7 +8,7 @@ let searchWindow = function(){
     const $searchBtn = qs(".search_btn");
     const $searchTerm = qs(".input_text");
     const $kwd_list =qs(".kwd_list");
-    const $item_del_bt = qs(".item_del_bt");
+    let $item_del_bt;
     let blankDicision = (term) => term.replace(/ /g,"");
 
     $searchTerm.addEventListener("keydown", searchWindowKeyEvent);
@@ -40,11 +41,11 @@ let searchWindow = function(){
         }
     }
     function render(){
-        $kwd_list.insertAdjacentHTML("afterbegin",searchListHtml(searchValue.slice(-1)[0])());
-        // $item_del_bt.addEventListener("click",function(){
-        //     console.log("안녕")
-        // })
+        $kwd_list.insertAdjacentHTML("afterbegin",searchListHtml(searchValue.slice(-1)[0]));
+        $item_del_bt = qs(".item_del_bt");
+        $item_del_bt.addEventListener("click",searchValueDelete);
     }
+
 };
 
 export {searchWindow,searchValue};
