@@ -1,13 +1,13 @@
 import { month, day } from './date.js'
 
-let searchListHtml = function(searchTerm){
+let searchListHtml = function(searchTerm,content){
     return `<li class="kwd_item">
     <div class="kwd">
         <span class="fix">                                                        
             <span class="kwd_ico">
                 <i class="search_ico"></i>
             </span>
-            <span class="ramen">${searchTerm}</span>
+            <span class="search_term_${content}">${searchTerm}</span>
         </span>
     </div>
     <span class="etc">
