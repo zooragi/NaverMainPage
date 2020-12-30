@@ -38,7 +38,7 @@ let searchWindow = function(){
             if(searchValue.indexOf(value) >= 0 ) {
                 let listItem = qs(`.search_term_${value}`).parentNode.parentNode.parentNode;
                 $kwd_list.removeChild(listItem);
-                $kwd_list.insertAdjacentHTML("afterbegin",searchListHtml(value));
+                render(value);
                 searchValue.splice(searchValue.indexOf(value),1);
                 searchValue.push(blankDicision(value));  
                 $searchTerm.value="";

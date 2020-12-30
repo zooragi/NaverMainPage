@@ -7,7 +7,7 @@ let searchListHtml = function(content){
             <span class="kwd_ico">
                 <i class="search_ico"></i>
             </span>
-            <span class="search_term_${content}">${content}</span>
+            <span class="search_term search_term_${content}">${content}</span>
         </span>
     </div>
     <span class="etc">
