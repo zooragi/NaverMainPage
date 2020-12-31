@@ -1,409 +1,486 @@
-*{
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
+* {
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
 }
-body{
-    line-height: 16px;
-    font-size: 12px;
+body {
+  line-height: 16px;
+  font-size: 12px;
 }
-ul , ol{
-    list-style: none;
+ul,
+ol {
+  list-style: none;
 }
-html{
-    font-size: 10px;
-    line-height: 10px;
+html {
+  font-size: 10px;
+  line-height: 10px;
 }
-button,input{
-    border-radius: 0;
-    border: 0;
+button,
+input {
+  border-radius: 0;
+  border: 0;
 }
-fieldset{
-    border: 0;
+fieldset {
+  border: 0;
 }
-.blind{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-.special_bar{
-    height: 160px;
+.special_bar {
+  height: 160px;
 }
-.naverlogo{
-    background-image: url(/public/naverlogo.png);
-    display: inline-block;
-    background-repeat: no-repeat;
-    vertical-align: top;
-    background-size: 440px 410px;
+.naverlogo {
+  background-image: url(/public/naverlogo.png);
+  display: inline-block;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  background-size: 440px 410px;
 }
-header .group_flex{
-    width: 1130px;
-    height:100%;
-    margin: 0 auto;
-    padding: 0 30px;
-    position: relative;
+header .group_flex {
+  width: 1130px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
 }
-.service_area{
-    clear: both;
-    display: inline-block;
-    position: absolute;
-    top: 12px;
-    right: 27px;
+.service_area {
+  clear: both;
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 27px;
 }
-.service_area .link_set{
-    float: left;
-    font-size: 11px;
-    color: #404040;
+.service_area .link_set {
+  float: left;
+  font-size: 11px;
+  color: #404040;
 }
-.service_area .link_set:hover{
-    text-decoration:underline;
+.service_area .link_set:hover {
+  text-decoration: underline;
 }
-.service_area .link_set:after{
-    width: 26px;
-    height: 26px;
-    background-position: -382px -213px;
-    content:'';
-    margin: -3px 0 0 3px;
+.service_area .link_set:after {
+  width: 26px;
+  height: 26px;
+  background-position: -382px -213px;
+  content: "";
+  margin: -3px 0 0 3px;
 }
-.service_area .sa_bar{
-    float:left;
-    width: 1px;
-    height: 10px;
-    margin: 3px 7px;
-    background-color: #e4e8eb;
+.service_area .sa_bar {
+  float: left;
+  width: 1px;
+  height: 10px;
+  margin: 3px 7px;
+  background-color: #e4e8eb;
 }
-.service_area .link_jrnaver{
-    float: left;
-    position: relative;
+.service_area .link_jrnaver {
+  float: left;
+  position: relative;
 }
-header .service_area .link_jrnaver .jrnaver_ico{
-    background-position: -333px -267px;
-    width: 60px;
-    height: 10px;
-    margin: 3px;
+header .service_area .link_jrnaver .jrnaver_ico {
+  background-position: -333px -267px;
+  width: 60px;
+  height: 10px;
+  margin: 3px;
 }
-.service_area .link_jrnaver .jrnaver_ico:hover{
-    background-image: url(/public/naverlogo.png);
-    background-size: 440px 410px;
-    background-position: -257px -296px;
-    background-repeat: no-repeat;
-
+.service_area .link_jrnaver .jrnaver_ico:hover {
+  background-image: url(/public/naverlogo.png);
+  background-size: 440px 410px;
+  background-position: -257px -296px;
+  background-repeat: no-repeat;
 }
-.service_area .link_happybean{
-    float: left;
+.service_area .link_happybean {
+  float: left;
 }
-header .service_area .happybean_ico{
-    width: 34px;
-    height: 11px;
-    background-position: -257px -308px;
-    margin: 3px 3px 2px;
+header .service_area .happybean_ico {
+  width: 34px;
+  height: 11px;
+  background-position: -257px -308px;
+  margin: 3px 3px 2px;
 }
-.service_area .happybean_ico:hover{
-    background-image: url(/public/naverlogo.png);
-    background-size: 440px 410px;
-    background-position: -380px -199px;
-    background-repeat: no-repeat;
+.service_area .happybean_ico:hover {
+  background-image: url(/public/naverlogo.png);
+  background-size: 440px 410px;
+  background-position: -380px -199px;
+  background-repeat: no-repeat;
 }
-header .logo_area{
-    position: relative;
-    height: 100%;
+header .logo_area {
+  position: relative;
+  height: 100%;
 }
-header .logo_default{
-    position: absolute;
-    top: 50%;
-    left: -9px;
-    margin-top: -32px;
-}
-
-header .logo_area .logo_ico{
-    width: 222px;
-    height: 52px;
-    background-position: 0 -158px;
-}
-header .search_bar{
-    position: absolute;
-    top: 50%;
-    left: 268px;
-    margin-top: -28px;
-}
-header .search_bar .green_box{
-    width:582px;
-    height:52px;
-    border: 2px solid #19ce60;
-    border-radius: 2px;
-}
-header .search_bar .green_box .input_text{
-    width: 444px;
-    line-height: 24px;
-    padding: 13px 15px;
-    margin: 1px;
-    background-color: #fff;
-    font-size: 18px;
-    line-height: 24px;
-    color: #000;
-    font-weight: 700;
-    outline: 0;
+header .logo_default {
+  position: absolute;
+  top: 50%;
+  left: -9px;
+  margin-top: -32px;
 }
 
-header .search_bar .search_btn{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 56px;
-    background-color: #19ce60;
-    border-radius: 0 2px 2px 0;
-    cursor: pointer;
+header .logo_area .logo_ico {
+  width: 222px;
+  height: 52px;
+  background-position: 0 -158px;
 }
-header .search_bar .search_btn .search_btn_ico{
-    width: 22px;
-    height: 22px;
-    background-position: -180px -386px;
+header .search_bar {
+  position: absolute;
+  top: 50%;
+  left: 268px;
+  margin-top: -28px;
 }
-header .search_bar .keyboard_btn{
-    position: absolute;
-    top: 0;
-    right: 84px;
-    bottom: 0;
-    width: 36px;
+header .search_bar .green_box {
+  width: 582px;
+  height: 52px;
+  border: 2px solid #19ce60;
+  border-radius: 2px;
 }
-header .search_bar .keyboard_ico{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 12px;
-    background-position: -420px -248px;
-    margin: -6px 0 0 -10px;
-    cursor: pointer;
+header .search_bar .green_box .input_text {
+  width: 444px;
+  line-height: 24px;
+  padding: 13px 15px;
+  margin: 1px;
+  background-color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+  font-weight: 700;
+  outline: 0;
 }
 
-header .search_bar .keyboard_ico:hover{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 12px;
-    background-position: -420px -262px;
-    margin: -6px 0 0 -10px;
-
+header .search_bar .search_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 56px;
+  background-color: #19ce60;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
 }
-header .search_bar .autocomplete{
-    position: absolute;
-    top: 0;
-    right: 64px;
-    bottom: 0;
-    width: 22px;
+header .search_bar .search_btn .search_btn_ico {
+  width: 22px;
+  height: 22px;
+  background-position: -180px -386px;
 }
-header .search_bar .autocomplete_ico{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 5px;
-    background-position: -404px -258px;
-    background-repeat: no-repeat;
-    margin: -2px 0 0 -5px;
-    cursor: pointer;
+header .search_bar .keyboard_btn {
+  position: absolute;
+  top: 0;
+  right: 84px;
+  bottom: 0;
+  width: 36px;
 }
-header .search_bar .autoframe{
-    position: absolute;
-    top: 55px;
-    left: 0;
-    width: 586px;
-    z-index: 300;
-}
-header .autoframe .autocmp_wrap{
-    border: 1px solid #e4e7e8;
-    border-top: 0;
-    border-radius: 0 0 6px 6px;
-    box-shadow: 0 2px 3px 0 rgba(0,1,3,.07);
-    letter-spacing: -.2px;
-    line-height: 1.8rem;
-    background-color: white;
-} 
-header .autoframe .autocmp_wrap .autocmp_recent_layout{
-    position: relative;
-    height: 100%;
-    padding-bottom: 40px;
-    box-sizing: border-box;
-}
-header .autoframe .autocmp_wrap .autocmp_recent_header{
-    position: relative;
-    margin-bottom: -11px;
-    padding: 8px 18px 0;
-    font-size: 1.4rem;
-    line-height: 3.3rem;
-    color: #666;
-}
-header .autoframe .autocmp_wrap .autocmp_recent_header .tit{
-    font-weight: 400;
-}
-header .autoframe .autocmp_wrap .autocmp_recent_header .delAll_item{
-    position: absolute;
-    top: 9px;
-    right: 18px;
-    display: inline-block;
-    font-size: 1.3rem;
-    color: grey;
-    vertical-align: top;
-    cursor: pointer;
-}
-header .autoframe .autocmp_wrap .autocmp_recent_container .kwd_list{
-    padding: 12px 0;
-}
-.autocmp_wrap .autocmp_recent_container .kwd_item{
-    overflow: hidden;
-    position: relative;
-    height: 3rem;
-    padding: 0 8rem 0 18px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 1.4rem;
-    line-height: 3rem;
-    cursor: pointer;
-}
-.autocmp_wrap .autocmp_recent_container .kwd_item:hover{
-    background-color: #f9fafb;
-}
-.autocmp_wrap .autocmp_recent_container .kwd_item .kwd{
-    display: block;
-    position: relative;
-    padding-left: 25px;
-    color: #242424;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.autocmp_wrap .kwd_ico{
-    background-color: #d1d7e5;
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    margin-top: -9px;
-    border-radius: 50%;
-}
-.autocmp_wrap .autocmp_recent_container .kwd_item .kwd_ico:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid rgba(0,0,0,.04);
-    border-radius: 50%;
+header .search_bar .keyboard_ico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 12px;
+  background-position: -420px -248px;
+  margin: -6px 0 0 -10px;
+  cursor: pointer;
 }
 
-.autocmp_wrap .kwd_item .search_ico{
-    position: absolute;
-    left: 0px;
-    top: 0;
-    right: 0;
-    bottom: -2px;
-    margin: auto;
-    width: 12px;
-    height: 12px;
-    background-position: -56px -263px;
-    display: inline-block;
-    overflow: hidden;
-    color: transparent;
-    white-space: nowrap;
-    vertical-align: top;
-    background-image: url(/public/naverlogo2.png);
-    background-size: 290px 280px;
+header .search_bar .keyboard_ico:hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 12px;
+  background-position: -420px -262px;
+  margin: -6px 0 0 -10px;
+}
+header .search_bar .autocomplete {
+  position: absolute;
+  top: 0;
+  right: 64px;
+  bottom: 0;
+  width: 22px;
+}
+header .search_bar .autocomplete_ico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 5px;
+  background-position: -404px -258px;
+  background-repeat: no-repeat;
+  margin: -2px 0 0 -5px;
+  cursor: pointer;
+}
+header .search_bar .autoframe {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 586px;
+  z-index: 300;
+}
+header .autoframe .autocmp_wrap {
+  border: 1px solid #e4e7e8;
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 2px 3px 0 rgba(0, 1, 3, 0.07);
+  letter-spacing: -0.2px;
+  line-height: 1.8rem;
+  background-color: white;
+}
+header .autoframe .autocmp_wrap .autocmp_recent_layout {
+  position: relative;
+  height: 100%;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+header .autoframe .autocmp_wrap .autocmp_recent_header {
+  position: relative;
+  margin-bottom: -11px;
+  padding: 8px 18px 0;
+  font-size: 1.4rem;
+  line-height: 3.3rem;
+  color: #666;
+}
+header .autoframe .autocmp_wrap .autocmp_recent_header .tit {
+  font-weight: 400;
+}
+header .autoframe .autocmp_wrap .autocmp_recent_header .delAll_item {
+  position: absolute;
+  top: 9px;
+  right: 18px;
+  display: inline-block;
+  font-size: 1.3rem;
+  color: grey;
+  vertical-align: top;
+  cursor: pointer;
+}
+header .autoframe .autocmp_wrap .autocmp_recent_container .kwd_list {
+  padding: 12px 0;
+}
+.autocmp_wrap .autocmp_recent_container .kwd_item {
+  overflow: hidden;
+  position: relative;
+  height: 3rem;
+  padding: 0 8rem 0 18px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  cursor: pointer;
+}
+.autocmp_wrap .autocmp_recent_container .kwd_item:hover {
+  background-color: #f9fafb;
+}
+.autocmp_wrap .autocmp_recent_container .kwd_item .kwd {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  color: #242424;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.autocmp_wrap .kwd_ico {
+  background-color: #d1d7e5;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  border-radius: 50%;
+}
+.autocmp_wrap .autocmp_recent_container .kwd_item .kwd_ico:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 50%;
+}
 
+.autocmp_wrap .kwd_item .search_ico {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: -2px;
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  background-position: -56px -263px;
+  display: inline-block;
+  overflow: hidden;
+  color: transparent;
+  white-space: nowrap;
+  vertical-align: top;
+  background-image: url(/public/naverlogo2.png);
+  background-size: 290px 280px;
 }
-.autocmp_wrap .kwd_item .etc{
-    position: absolute;
-    top: 0;
-    right: 7px;
-    width: 8rem;
-    text-align: right;
+.autocmp_wrap .kwd_item .etc {
+  position: absolute;
+  top: 0;
+  right: 7px;
+  width: 8rem;
+  text-align: right;
 }
-.autocmp_wrap .kwd_item .date{
-    position: absolute;
-    top: 0;
-    right: 34px;
-    font-size: 1.3rem;
-    color: grey;
-    letter-spacing: 0;
+.autocmp_wrap .kwd_item .date {
+  position: absolute;
+  top: 0;
+  right: 34px;
+  font-size: 1.3rem;
+  color: grey;
+  letter-spacing: 0;
 }
-.autocmp_wrap .kwd_item .item_del_bt{
-    position: relative;
-    display: inline-block;
-    width: 32px;
-    height: 29.6px;
-    vertical-align: top;
+.autocmp_wrap .kwd_item .item_del_bt {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 29.6px;
+  vertical-align: top;
 }
-.autocmp_wrap .kwd_item .item_del_bt_ico{
-    width: 11px;
-    height: 11px;
-    background-position: -111px -262px;
-    margin-right: 11px;
-    vertical-align: -1px; 
+.autocmp_wrap .kwd_item .item_del_bt_ico {
+  width: 11px;
+  height: 11px;
+  background-position: -111px -262px;
+  margin-right: 11px;
+  vertical-align: -1px;
 }
-.autocmp_wrap .kwd_item .imsc{
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    display: inline-block;
-    overflow: hidden;
-    color: transparent;
-    white-space: nowrap;
-    background-image: url(/public/naverlogo2.png);
-    background-repeat: no-repeat;
-    background-size: 290px 280px;
+.autocmp_wrap .kwd_item .imsc {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  display: inline-block;
+  overflow: hidden;
+  color: transparent;
+  white-space: nowrap;
+  background-image: url(/public/naverlogo2.png);
+  background-repeat: no-repeat;
+  background-size: 290px 280px;
 }
-header .autoframe .autocmp_wrap .autocmp_recent_footer{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 39px;
-    border-top: 1px solid #f1f4f6;
-    border-radius: 0 0 6px 6px;
-    font-size: 1.3rem;
-    line-height: 37px;
-    text-align: right;
-    background-color: #f9fafb;
+header .autoframe .autocmp_wrap .autocmp_recent_footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 39px;
+  border-top: 1px solid #f1f4f6;
+  border-radius: 0 0 6px 6px;
+  font-size: 1.3rem;
+  line-height: 37px;
+  text-align: right;
+  background-color: #f9fafb;
 }
 
-.autocmp_wrap .autocmp_recent_footer .side_option{
-    float: left;
-    padding-left: 12px;
+.autocmp_wrap .autocmp_recent_footer .side_option {
+  float: left;
+  padding-left: 12px;
 }
-.autocmp_wrap .autocmp_recent_footer .side_option_help{
-    float: left;
+.autocmp_wrap .autocmp_recent_footer .side_option_help {
+  float: left;
 }
-.autocmp_wrap .autocmp_recent_footer .side_option_help_btn{
-    display: inline-block;
-    padding: 0 6px;
-    color: grey;
-    vertical-align: top;
-    cursor: pointer;
+.autocmp_wrap .autocmp_recent_footer .side_option_help_btn {
+  display: inline-block;
+  padding: 0 6px;
+  color: grey;
+  vertical-align: top;
+  cursor: pointer;
 }
-.autocmp_wrap .autocmp_recent_footer .side_option_help_btn:hover{
-    text-decoration: underline;
+.autocmp_wrap .autocmp_recent_footer .side_option_help_btn:hover {
+  text-decoration: underline;
+}
+.autocmp_wrap .autocmp_recent_footer .rside_option {
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: top;
+}
+.autocmp_wrap .autocmp_recent_footer .rside_option_help_btn {
+  display: inline-block;
+  padding: 0 6px;
+  color: grey;
+  vertical-align: top;
+  cursor: pointer;
+}
+.autocmp_wrap .autocmp_recent_footer .rside_option_help_btn:hover {
+  text-decoration: underline;
+}
+.nav_wrap {
+  position: relative;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.nav_wrap .nav_container {
+  position: relative;
+  width: 1130px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.nav_wrap .nav_container > nav {
+  overflow: hidden;
+  position: relative;
+  padding: 11px 220px 11px 0;
+}
+.nav_wrap .nav_container .nav_lists {
+  float: left;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: -0.3px;
+}
 
+.nav_wrap .nav_container .nav_lists > li {
+  display: inline-block;
 }
-.autocmp_wrap .autocmp_recent_footer .rside_option{
-    display: inline-block;
-    margin-right: 12px;
-    vertical-align: top;
+.nav_wrap .nav_container .nav_lists .nav_item {
+  float: left;
 }
-.autocmp_wrap .autocmp_recent_footer .rside_option_help_btn{
-    display: inline-block;
-    padding: 0 6px;
-    color: grey;
-    vertical-align: top;
-    cursor: pointer;
+.nav_wrap .nav_container .nav_lists .nav_item + .nav_item {
+  margin-left: 18px;
 }
-.autocmp_wrap .autocmp_recent_footer .rside_option_help_btn:hover{
-    text-decoration: underline;
+.nav_wrap .nav_container .nav_lists + .nav_lists {
+  margin-left: 18px;
+}
+.nav_wrap .nav_container .nav_list_left > li a {
+  color: #03c75a;
+}
+.nav_wrap .nav_container .nav_list_right > li a {
+  color: #000;
+}
+
+.nav_lists .mail_ico {
+  width: 21px;
+  height: 21px;
+  background-position: -228px -386px;
+  margin: 3px 9px 0 0;
+}
+.nav_lists .tv_ico {
+  width: 12px;
+  height: 14px;
+  background-position: -256px -212px;
+  margin: 9px 2px 0 0;
+}
+
+.nav_container .btn_more {
+  float: left;
+  min-width: 70px;
+  margin-left: 17px;
+  font-size: 13px;
+  line-height: 30px;
+  color: #202020;
+  text-align: right;
+}
+
+.nav_container .btn_more::after {
+  display: inline-block;
+  width: 11px;
+  height: 7px;
+  background-position: -319px -258px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  content: "";
+  margin-left: 7px;
+  vertical-align: 2px;
+  background-image: url(/public/naverlogo.png);
+  background-size: 440px 410px;
 }
