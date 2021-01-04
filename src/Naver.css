@@ -428,6 +428,12 @@ header .autoframe .autocmp_wrap .autocmp_recent_footer {
   color: #000;
   letter-spacing: -0.3px;
 }
+.nav_wrap .nav_container .nav_lists:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both;
+}
 
 .nav_wrap .nav_container .nav_lists > li {
   display: inline-block;
@@ -483,4 +489,65 @@ header .autoframe .autocmp_wrap .autocmp_recent_footer {
   vertical-align: 2px;
   background-image: url(/public/naverlogo.png);
   background-size: 440px 410px;
+}
+
+.nav_wrap .real_time_search_term_wrap {
+  position: absolute;
+  top: 11px;
+  right: 30px;
+  overflow: hidden;
+  width: 210px;
+  height: 30px;
+}
+.nav_wrap .real_time_search_term_wrap:after {
+  position: absolute;
+  top: 11px;
+  right: 0;
+  display: inline-block;
+  width: 14px;
+  height: 9px;
+  background-position: -388px -245px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  content: "";
+  background-image: url(/public/naverlogo.png);
+  background-size: 440px 410px;
+}
+
+.nav_wrap .real_time_search_term_wrap .real_time_keyword_box {
+  position: relative;
+  height: 30px;
+  font-size: 13px;
+  line-height: 30px;
+  z-index: 1;
+}
+
+.real_time_keyword_box .real_time_viewport {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  width: 210px;
+}
+.real_time_keyword_box .real_time_viewport {
+  width: 100%;
+  height: 100%;
+  /* will-change: transform;
+  transform: translate3d(0px, -29px, 0px); */
+}
+.real_time_keyword_box .rts_rank {
+  float: left;
+  margin: 2px 9px 0 0;
+  font-size: 15px;
+  line-height: 27px;
+  color: #03c75a;
+}
+.real_time_keyword_box .rts_keyword {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
 }
