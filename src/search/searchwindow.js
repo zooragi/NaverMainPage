@@ -34,14 +34,23 @@ let searchWindow = function(){
             return;
         }
         else{
-            searchValue.push(blankDicision($searchTerm.value));  
+            if(searchValue.indexOf(value) >= 0 ) {
+                let listItem = qs(`.search_term_${value}`).parentNode.parentNode.parentNode;
+                $kwd_list.removeChild(listItem);
+                $kwd_list.insertAdjacentHTML("afterbegin",searchListHtml(value));
+                searchValue.splice(searchValue.indexOf(value),1);
+                searchValue.push(blankDicision(value));  
+                $searchTerm.value="";
+                return;
+            }
+            searchValue.push(blankDicision(value));  
             if(searchValue.length > 9) $kwd_list.lastChild.remove();
             $searchTerm.value="";
-            render();
+            render(value);
         }
     }
-    function render(){
-        $kwd_list.insertAdjacentHTML("afterbegin",searchListHtml(searchValue.slice(-1)[0]));
+    function render(value){
+        $kwd_list.insertAdjacentHTML("afterbegin",searchListHtml(value));
         $item_del_bt = qs(".item_del_bt");
         $item_del_bt.addEventListener("click",searchValueDelete);
     }
