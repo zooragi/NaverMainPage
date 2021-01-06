@@ -551,3 +551,124 @@ header .autoframe .autocmp_wrap .autocmp_recent_footer {
   white-space: nowrap;
   display: block;
 }
+.nav_wrap .rts_rank_list_view {
+  position: absolute;
+  top: 53px;
+  right: 30px;
+  min-width: 300px;
+  height: 425px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.12);
+  z-index: 5;
+}
+.rts_rank_list_view .rts_title {
+  position: relative;
+  padding: 19px 50px 15px 20px;
+  border-bottom: 1px solid #e4e8eb;
+  line-height: 18px;
+}
+.rts_rank_list_view .rts_title h3 {
+  float: left;
+  font-size: 14px;
+  color: #000;
+}
+.rts_rank_list_view .rts_title::after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both;
+}
+.rts_list_area .rts_list_wrap {
+  float: left;
+  width: 260px;
+  height: 327px;
+  padding: 0 20px;
+}
+.rts_list_wrap .rank_tab {
+  position: relative;
+  margin-top: 17px;
+}
+.rank_tab .half_rank_tab {
+  font-size: 13px;
+  color: grey;
+}
+.rank_tab .half_rank_tab + .half_rank_tab {
+  margin-left: 18px;
+}
+.rank_tab .half_rank_tab[aria-selected="true"] {
+  color: #000;
+  font-weight: 700;
+}
+.rank_tab .half_rank_tab[aria-selected="true"]::before {
+  background-color: #20d782;
+  vertical-align: 1px;
+}
+.rank_tab .half_rank_tab::before {
+  background-color: #d4d9de;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  content: "";
+  margin-right: 7px;
+  vertical-align: 1px;
+}
+.rts_box .rts_list {
+  margin-top: 9px;
+}
+
+.rts_box .rts_list .rank {
+  float: left;
+  min-width: 16px;
+  margin: 2px 8px 0 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #404040;
+  text-align: center;
+}
+.rts_box .rts_list .rts_list_item {
+  position: relative;
+  line-height: 27px;
+  letter-spacing: -0.2px;
+}
+.rts_box .rts_list .rts_list_item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.rts_box .rts_list .keyword {
+  white-space: nowrap;
+  font-size: 13px;
+}
+.rts_rank_list_view .rts_foot {
+  overflow: hidden;
+  clear: both;
+  height: 43px;
+  padding: 0 20px;
+  border-top: 1px solid #e4e8eb;
+}
+.rts_foot .rts_foot_info {
+  float: left;
+  padding-top: 14px;
+  font-size: 11px;
+}
+.rts_foot .rts_foot_info .foot_info {
+  float: left;
+  color: grey;
+}
+.rts_foot .link_datalab {
+  float: right;
+  padding: 16px 0;
+  line-height: 11px;
+}
+.rts_foot .link_datalab::before {
+  display: inline-block;
+  width: 67px;
+  height: 11px;
+  background-position: -319px -245px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  content: "";
+  background-size: 440px 410px;
+  background-image: url(/public/naverlogo.png);
+}
