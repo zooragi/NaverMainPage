@@ -4,7 +4,6 @@ import { searchListRender } from './saerchlistrender.js'
 
 let searchValue = [];
 let searchWindow = function(){
-
     const qs = (x) => document.querySelector(x);
     const $searchBtn = qs(".search_btn");
     const $searchTerm = qs(".input_text");
