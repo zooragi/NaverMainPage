@@ -9,6 +9,7 @@ let searchWindow = function(){
     const $searchTerm = qs(".input_text");
     const $kwd_list = qs(".kwd_list");
     const $inputText = qs(".input_text");
+    let uniqueNum = 0;
     let $item_del_bt;
     let toggle = true;
     let blankDicision = (term) => term.replace(/ /g,"");
@@ -60,6 +61,14 @@ let searchWindow = function(){
         searchValueSave($searchTerm.value);
         $searchTerm.focus();
     }
+    class searchTermInfo{
+        constructor(value,uniqueNum,frequencyNum){
+            this.value = value;
+            this.uniqueNum = uniqueNum;
+            this.frequencyNum = frequencyNum;
+        }
+    }
+
     // --이벤트 핸들러--
     function searchValueSave(value){
         if(blankDicision(value) === ""){
@@ -67,23 +76,28 @@ let searchWindow = function(){
             return;
         }
         else{
-            if(searchValue.indexOf(value) >= 0 ) {
-                let listItem = qs(`.search_term_${value}`).parentNode.parentNode.parentNode;
+            uniqueNum++;
+            if(searchValue.some(x=>x.value === value) ) {
+                let existValue = searchValue.filter(x=>x.value === value);
+                console.log(searchValue);
+                let listItem = qs(`.search_term_${existValue[0].uniqueNum}`).parentNode.parentNode.parentNode;
                 $kwd_list.removeChild(listItem);
-                render(value);
-                searchValue.splice(searchValue.indexOf(value),1);
-                searchValue.push(blankDicision(value));  
+                searchValue.splice(searchValue.indexOf(existValue[0]),1);
+                existValue[0].uniqueNum = uniqueNum;
+                existValue[0].frequencyNum += 1;
+                searchValue.push(existValue[0]);  
+                render(value,uniqueNum);
                 $searchTerm.value="";
                 return;
             }
-            searchValue.push(blankDicision(value));  
+            searchValue.push(new searchTermInfo(value,uniqueNum,1)); 
             if(searchValue.length > 9) $kwd_list.lastChild.remove();
             $searchTerm.value="";
-            render(value);
+            render(value,uniqueNum);
         }
     }
-    function render(value){
-        $kwd_list.insertAdjacentHTML("afterbegin",searchListHtml(value));
+    function render(value){        
+        $kwd_list.insertAdjacentHTML("afterbegin",searchListHtml(value,uniqueNum));
         $item_del_bt = qs(".item_del_bt");
         $item_del_bt.addEventListener("click",searchValueDelete);
     }

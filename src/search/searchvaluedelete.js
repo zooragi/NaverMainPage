@@ -8,7 +8,8 @@ let searchValueDelete = function(event)  {
     $inputText.focus();
     $greenBox.classList.add("window_focus");
     let clickedValue = event.currentTarget.parentNode.parentNode.getElementsByClassName("search_term")[0].innerText;
-    searchValue.splice(searchValue.indexOf(clickedValue),1);
+    let clickedValueElement = searchValue.filter(x=>x.value === clickedValue)
+    searchValue.splice(searchValue.indexOf(clickedValueElement[0]),1);
     $kwd_list.removeChild(event.currentTarget.parentNode.parentNode);
 }
 
