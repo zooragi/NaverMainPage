@@ -41,6 +41,7 @@ fieldset {
   vertical-align: top;
   background-size: 440px 410px;
 }
+
 header .group_flex {
   width: 1130px;
   height: 100%;
@@ -568,6 +569,16 @@ header .autoframe .autocmp_wrap .autocmp_recent_footer {
   padding: 19px 50px 15px 20px;
   border-bottom: 1px solid #e4e8eb;
   line-height: 18px;
+}
+.rts_rank_list_view .rts_title .list_view_close_btn_ico {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 14px;
+  height: 14px;
+  background-position: -420px -347px;
+  margin: 19px 18px;
+  cursor: pointer;
 }
 .rts_rank_list_view .rts_title h3 {
   float: left;
