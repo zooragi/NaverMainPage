@@ -605,6 +605,9 @@ header .autoframe .autocmp_wrap .autocmp_recent_footer {
   font-size: 13px;
   color: grey;
 }
+.rank_tab .half_rank_tab:hover {
+  text-decoration: underline;
+}
 .rank_tab .half_rank_tab + .half_rank_tab {
   margin-left: 18px;
 }

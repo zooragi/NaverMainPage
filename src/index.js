@@ -5,7 +5,6 @@ import * as keyword from "./keywordwindow/index.js"
     function init(){
         search.searchWindow();
         keyword.keywordWindow();
-        
     }
     init();
 })();
